@@ -5,7 +5,7 @@
     ],
     "alwaysStrict": true,
     "strictNullChecks": true,
-    "noImplicitAny": true
+    "noImplicitAny": true,
   },
   "files": [
     "src/index.ts"

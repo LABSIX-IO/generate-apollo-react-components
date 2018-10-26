@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-node lib/index.js
+node $(dirname $0)/../lib/index.js
