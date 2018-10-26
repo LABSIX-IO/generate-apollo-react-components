@@ -32,7 +32,9 @@ const interfaces = source
   })
   .map(i => i.getName());
 
-fs.unlinkSync(file2);
+try {
+  fs.unlinkSync(file2);
+} catch {}
 const target = project.createSourceFile(file2);
 
 const namedApolloImports: string[] = [];

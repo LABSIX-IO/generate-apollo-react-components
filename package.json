@@ -14,8 +14,9 @@
     "build:commonjs": "rimraf lib && tsc --target es5 --outDir lib --module commonjs --declaration",
     "build:es": "rimraf es && tsc --target es6 --outDir es --module es6",
     "build": "npm run build:commonjs ",
+    "makebin": "echo '#!/usr/bin/env node' > ./bin/generate-apollo-react-components && cat lib/index.js >> ./bin/generate-apollo-react-components",
     "ts": "ts-node src/",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build && npm run makebin"
   },
   "keywords": [],
   "author": "",
