@@ -1,6 +1,6 @@
 {
   "name": "@lab6/generate-apollo-react-components",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Generate React Query/Mutation Typescript Components",
   "main": "./lib/index.js",
   "directories": {
