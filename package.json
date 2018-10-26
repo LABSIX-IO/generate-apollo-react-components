@@ -6,7 +6,9 @@
   "directories": {
     "lib": "lib"
   },
-  "bin": "node lib/index.js",
+  "bin": {
+    "generate-apollo-react-components": "./bin/generate-apollo-react-components"
+  },
   "scripts": {
     "test": "ts-node src/index.ts test/mocktypes.ts test/result.ts",
     "build:commonjs": "rimraf lib && tsc --target es5 --outDir lib --module commonjs --declaration",
