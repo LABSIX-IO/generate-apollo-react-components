@@ -1,0 +1,34 @@
+{
+  "name": "@lab6/generate-apollo-react-components",
+  "version": "1.0.0",
+  "description": "Generate React Query/Mutation components",
+  "main": "./lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "bin": "node lib/index.js",
+  "scripts": {
+    "test": "ts-node src/index.ts test/mocktypes.ts test/result.ts",
+    "build:commonjs": "rimraf lib && tsc --target es5 --outDir lib --module commonjs --declaration",
+    "build:es": "rimraf es && tsc --target es6 --outDir es --module es6",
+    "build": "npm run build:commonjs ",
+    "ts": "ts-node src/",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "rimraf": "^2.6.2",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.1.3"
+  },
+  "files": [
+    "lib"
+  ],
+  "types": "./lib/index.d.ts",
+  "dependencies": {
+    "@types/node": "^10.12.0",
+    "ts-simple-ast": "^17.1.1"
+  }
+}
