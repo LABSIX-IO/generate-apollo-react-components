@@ -63,10 +63,12 @@ target.addImportDeclaration({
   namedImports: namedApolloImports
 });
 target.addImportDeclaration({
-  moduleSpecifier: path.relative(file2, file).replace(/\.ts$/, ''),
+  moduleSpecifier:
+    './' + path.relative(path.dirname(file2), file).replace(/\.ts$/, ''),
   namedImports
 });
 
-target.saveSync();
+const text = target.getFullText();
+fs.writeFileSync(file2, '/* tslint:disable */\n' + text);
 
 console.log(`Generated ${interfaces.length} classes`);
